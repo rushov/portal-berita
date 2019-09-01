@@ -28,10 +28,10 @@ class Header extends Component {
 		return (
 			<Router>
 				<div className="header">
-					<div className="header__logo">
+					<div className="container header__logo">
 						<a className="navbar-brand" href={url_logo}>PZ News</a>
 					</div>
-					<div className="header__navigation">
+					<div className="container header__navigation">
 						<nav className="navbar navbar-expand-lg navbar-light bg-light">
 							<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 								<span className="navbar-toggler-icon"></span>
@@ -42,8 +42,8 @@ class Header extends Component {
 								</ul>
 							</div>
 						</nav>
-					</div>
-				</div>				
+					</div>	
+				</div>
 			</Router>
 		)
 	}
