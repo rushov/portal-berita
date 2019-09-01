@@ -37,8 +37,9 @@ ul {
 	font-size: 14px;
 }
 
-.content{
-	
+.content {
+	background-color: #FFF;
+	padding: 20px;
 }
 
 .content__title{
@@ -54,7 +55,7 @@ ul {
 	border-bottom: 1px solid #eaeaea;
 	padding: 22px 5px;
 	width: 1040px;
-	min-height: 150px;
+	max-height: 150px;
 }
 
 .news__image{
@@ -103,16 +104,63 @@ a:hover, a:link{
 	max-height: 150px;
 }
 
-.content {
-	background-color: #FFF;
-	padding: 20px;
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+.loading{
+	margin: 20px 0px;
+	
+}
+.loading__image {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 1000px 104px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+	float: left;
 }
 
-.content h2 {
-	padding: 0;
-	margin: 0;
+.loading__text-top {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 1000px 104px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+	padding-left: 20px;
+    margin-left: 200px;
 }
 
-.content li {
-	margin-bottom: 10px;
+.loading__text-bottom {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 1000px 104px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+	padding-left: 20px;
+    margin-left: 200px;
+	margin-top:20px;
 }
