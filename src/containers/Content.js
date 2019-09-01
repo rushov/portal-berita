@@ -76,7 +76,7 @@ let News = ({ newslist, isloading,menuactive }) => {
 			</Async>
 		);
 
-		title= 'Hightligth';
+		title= 'Highligth';
 	}
 
 	if(menuactive){
