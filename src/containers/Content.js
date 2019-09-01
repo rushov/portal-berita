@@ -32,7 +32,19 @@ let News = ({ newslist, loading,menuactive }) => {
 		news = (
 			<Async promiseFn={loadHome}>
 				{({ data, err, isLoading }) => {
-					if (isLoading) {return "Loading...";}
+					if (isLoading) {
+					var i, loading = [];
+						for (i = 0; i < 5; i++) {
+						loading.push (
+							<div className="loading">
+								<div className="col-md-2 col-xs-12 loading__image"></div>
+								<div className="col-md-10 col-xs-12 loading__text-top"></div>
+								<div className="col-md-10 col-xs-12 loading__text-bottom"></div>
+								<div className="col-md-10 col-xs-12 loading__text-bottom"></div>
+							</div>);
+						}
+						return loading;
+					}
 					if (err) {return `An error occurred.: ${err.message}`}
 
 					if (data){
@@ -73,7 +85,17 @@ let News = ({ newslist, loading,menuactive }) => {
 
 
 	if (loading) {
-		news = <h3 className="loading-indicator">Loading ...</h3>
+		var i, loading = [];
+		for (i = 0; i < 5; i++) {
+		loading.push (
+			<div className="loading">
+				<div className="col-md-2 col-xs-12 loading__image"></div>
+				<div className="col-md-10 col-xs-12 loading__text-top"></div>
+				<div className="col-md-10 col-xs-12 loading__text-bottom"></div>
+				<div className="col-md-10 col-xs-12 loading__text-bottom"></div>
+			</div>);
+		}
+		news= loading;
 	}
 
 	return (
