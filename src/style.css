@@ -1,25 +1,16 @@
 body {
 	background-color: #FFF;
-	padding: 20px;
-	margin: 0;
 }
 
+/***************************** CSS for Header *****************************/
 .header {
 	height: auto;
+	background-color: #f8f8f8;
 }
 
 .header__logo{
 	height: 50px;
 	color: #000;
-}
-
-.header__navigation{
-	background-color: #fff;
-	
-}
-
-h1, h2, p, ul, li {
-	
 }
 
 ul {
@@ -35,11 +26,16 @@ ul {
 
 .navigation__list{
 	font-size: 14px;
+	font-weight: bold;
 }
+
+/***************************** END CSS for Header *****************************/
+
+
+/***************************** CSS for Content *****************************/
 
 .content {
 	background-color: #FFF;
-	padding: 20px;
 }
 
 .content__title{
@@ -48,25 +44,30 @@ ul {
 }
 
 .content__detail{
-	height: auto;
+	margin:20px 0px;
+	word-break: break-word;
 }
 
 .news__list{
 	border-bottom: 1px solid #eaeaea;
 	padding: 22px 5px;
-	width: 1040px;
-	max-height: 150px;
+	word-break: break-word;
+	/*width: 1040px;
+	max-height: 150px;*/
 }
 
 .news__image{
 	float: left;
-	clear:both;  
+	clear:both;
+	max-height: 150px;  
 }
 
 .img__thumbnail{
-	width: 100%;
+	/*width: 100%;
 	height: 0;
-  	padding-bottom: calc(591.44 / 1127.34 * 100%);
+  	padding-bottom: calc(591.44 / 1127.34 * 100%);*/
+	width: 150px;
+	height: 100px;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position-x: center;
@@ -83,27 +84,25 @@ ul {
 	word-wrap: break-word;
 	text-decoration: none;
   	display: inline-block;
+	cursor: pointer;
 }
 
 .news__title:hover, .news__title:link{
 	text-decoration: none;
   	display: inline-block;
+	cursor: pointer;
 }
 
-a:hover, a:link{
+.pointer:hover, .pointer:link{
 	text-decoration: none;
   	display: inline-block;
+	cursor: pointer;
 }
 
-.a:hover{
-	text-decoration: none;
-  	display: inline-block;
-}
 
 .news__detail{
 	max-height: 150px;
 }
-
 
 @keyframes placeHolderShimmer{
     0%{
@@ -114,9 +113,10 @@ a:hover, a:link{
     }
 }
 .loading{
-	margin: 20px 0px;
+	margin: 20px;
 	
 }
+
 .loading__image {
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -145,7 +145,6 @@ a:hover, a:link{
     position: relative;
     overflow: hidden;
 	padding-left: 20px;
-    margin-left: 200px;
 }
 
 .loading__text-bottom {
@@ -161,6 +160,59 @@ a:hover, a:link{
     position: relative;
     overflow: hidden;
 	padding-left: 20px;
-    margin-left: 200px;
 	margin-top:20px;
 }
+
+@media (min-width: 768px){
+	.loading__text-top {
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+		animation-iteration-count: infinite;
+		animation-name: placeHolderShimmer;
+		animation-timing-function: linear;
+		background: #f6f7f8;
+		background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+		background-size: 1000px 104px;
+		height: 20px;
+		position: relative;
+		overflow: hidden;
+		padding-left: 20px;
+		margin-left: 200px;
+	}
+
+	.loading__text-bottom {
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+		animation-iteration-count: infinite;
+		animation-name: placeHolderShimmer;
+		animation-timing-function: linear;
+		background: #f6f7f8;
+		background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+		background-size: 1000px 104px;
+		height: 20px;
+		position: relative;
+		overflow: hidden;
+		padding-left: 20px;
+		margin-left: 200px;
+		margin-top:20px;
+	}
+}
+
+/***************************** END CSS for Content *****************************/
+
+/***************************** CSS for Footer *****************************/
+.footer{
+	height: 100px;
+	background-color: #f8f8f8;
+}
+
+.footer__logo{
+	height: 50px;
+    /* vertical-align: middle; */
+    margin: 10px 0px;
+    /* width: inherit; */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+/***************************** END CSS for Footer *****************************/
