@@ -18,8 +18,9 @@ const loadHome = () =>
 		}
 	)))
 
-let News = ({ newslist, loading,menuactive }) => {
+let News = ({ newslist, isloading,menuactive }) => {
 	let news = '',title='';
+	var i, loading = [];
 	
 	if(newslist) {
 		news = newslist.map((article, index) =>
@@ -33,7 +34,6 @@ let News = ({ newslist, loading,menuactive }) => {
 			<Async promiseFn={loadHome}>
 				{({ data, err, isLoading }) => {
 					if (isLoading) {
-					var i, loading = [];
 						for (i = 0; i < 5; i++) {
 						loading.push (
 							<div className="loading">
@@ -84,8 +84,7 @@ let News = ({ newslist, loading,menuactive }) => {
 	}
 
 
-	if (loading) {
-		var i, loading = [];
+	if (isloading) {
 		for (i = 0; i < 5; i++) {
 		loading.push (
 			<div className="loading">
@@ -112,7 +111,7 @@ let News = ({ newslist, loading,menuactive }) => {
 
 const mapStateToProps = (state) => ({
 	newslist: state.content.json,
-	loading: state.content.loading,
+	isloading: state.content.loading,
 
 	menuactive: state.activeMenu.json,
 });
